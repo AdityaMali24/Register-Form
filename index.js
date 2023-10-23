@@ -21,7 +21,7 @@ app.listen(PORT, () => {
 
 var corsOptions = {
   origin:
-    "https://65360f0991734877d643fa9e--fascinating-klepon-489f74.netlify.app/",
+    "https://65360f0991734877d643fa9e--fascinating-klepon-489f74.netlify.app",
   methods: ["GET", "POST"], // or other HTTP methods
   allowedHeaders: ["Content-Type", "Authorization"], // or other headers
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
