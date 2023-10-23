@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import ApplicantRouter from "./routers/applicant.router";
 import dotenv from "dotenv";
+import path from "path";
+
 
 var app = express();
 
@@ -10,7 +12,8 @@ const PORT = process.env.PORT || 8008;
 dotenv.config();
 
 app.use(express.json());
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.listen(PORT, () => {
   console.log("Your server running on http://localhost:" + PORT);
